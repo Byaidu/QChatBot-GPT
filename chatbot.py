@@ -90,10 +90,10 @@ async def send_message_proxy(app: Ariadne, group: Group, resp: MessageChain, quo
     msg = await app.send_message(group,resp,quote=quote)
     if msg.source.id < 0:
         txt = '\n'.join([textwrap.fill(i) for i in resp.display.splitlines()])
-        with open('Desktop\\in.txt','wb') as f:
+        with open('in.txt','wb') as f:
             f.write(txt.encode('utf-8'))
-        os.system('Desktop\\silicon.exe Desktop\\in.txt -o Desktop\\out.png -f "微软雅黑" -l c --no-window-controls --background "#fff0" --pad-horiz 0 --pad-vert 0 --no-line-number --no-round-corner 2>nul')
-        with open('Desktop\\out.png','rb') as f:
+        os.system('silicon.exe in.txt -o out.png -f "微软雅黑" -l c --no-window-controls --background "#fff0" --pad-horiz 0 --pad-vert 0 --no-line-number --no-round-corner 2>nul')
+        with open('out.png','rb') as f:
             pic = f.read()
         await app.send_message(group,MessageChain(Image(data_bytes=pic)),quote=quote)
     return
@@ -188,7 +188,7 @@ async def mem(app: Ariadne, group: Group, message: MessageChain = DetectPrefix("
 @bcc.receiver(GroupMessage)
 async def help(app: Ariadne, group: Group, message: MessageChain = DetectPrefix("/help")):
     await send_message_proxy(app,group,MessageChain('''\
-QChatBot@CNSS 指令列表
+QChatBot-GPT 指令列表
 
 /chat   ：生成对话
 /clear  ：重置对话
@@ -203,6 +203,7 @@ QChatBot@CNSS 指令列表
 注：预设+记忆+回答 共同占用长度为 4096 tokens 的区域
 '''))
     await send_message_proxy(app,group,MessageChain('配置参考：https://beta.openai.com/docs/api-reference/completions/create'))
+    await send_message_proxy(app,group,MessageChain('项目地址：https://github.com/Byaidu/QChatBot-GPT'))
 
 chat_config = read_chat_config()
 
