@@ -15,7 +15,7 @@
 ## 使用
 
 ```
-QChatBot@CNSS 指令列表
+QChatBot-GPT 指令列表
 
 /chat   ：生成对话
 /clear  ：重置对话
