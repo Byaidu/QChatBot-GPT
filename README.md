@@ -59,3 +59,25 @@ A:སོགས་ཆས་འཆི་ཤས་འཆར་རེ། རྗེ�
 Q:把 སོགས་ཆས་འཆི་ཤས་འཆར་རེ། རྗེ་འདུ་ར་འགུའ་རྗེ་འདུ་ས་མ་བསྐྱེད་པའི་ཆས་འཆི་ཤས་ལ་གཅིག་བྱེད་པ། 翻译成普通话
 A:我要用电子烟把乐子烟出来，让这里的乐子都活跃起来。
 ```
+
+## 配置
+
+```
+{
+    "preset": "", // 预设，用于设置人格
+    "api_key": "", // OpenAI API Key
+    "enable_context": true, // 启用上下文
+    "context": "", // 上下文内容
+    "openai": { // OpenAI 参数
+        "model": "text-davinci-003", //语言模型
+        "temperature": 0.9, //采样温度，趋近0会给出理智的回答，趋近1会给出创意的回答
+        "max_tokens": 3000, //生成长度
+        "top_p": 1, //核采样参数
+        "echo": false, //回显上下文
+        "presence_penalty": 0, //presence惩罚
+        "frequency_penalty": 0 //frequency惩罚
+    }
+}
+```
+
+关于详细信息请参考 [OpenAI 官方文档](https://beta.openai.com/docs/api-reference/completions)
