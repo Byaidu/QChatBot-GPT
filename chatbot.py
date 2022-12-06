@@ -11,6 +11,7 @@ from creart import create
 from graia.ariadne.app import Ariadne
 from graia.ariadne.connection.config import config
 from graia.ariadne.event.message import GroupMessage
+from graia.ariadne.event.mirai import NewFriendRequestEvent, BotInvitedJoinGroupRequestEvent
 from graia.ariadne.message.chain import MessageChain
 from graia.ariadne.model import Group
 from graia.broadcast import Broadcast
@@ -204,6 +205,16 @@ QChatBot-GPT 指令列表
 '''))
     await send_message_proxy(app,group,MessageChain('配置参考：https://beta.openai.com/docs/api-reference/completions/create'))
     await send_message_proxy(app,group,MessageChain('项目地址：https://github.com/Byaidu/QChatBot-GPT'))
+
+@bcc.receiver(BotInvitedJoinGroupRequestEvent)
+async def help(app: Ariadne, event: BotInvitedJoinGroupRequestEvent):
+    logging.info('BotInvitedJoinGroupRequestEvent')
+    await event.accept()
+
+@bcc.receiver(NewFriendRequestEvent)
+async def help(app: Ariadne, event: NewFriendRequestEvent):
+    logging.info('NewFriendRequestEvent')
+    await event.accept()
 
 chat_config = read_chat_config()
 
