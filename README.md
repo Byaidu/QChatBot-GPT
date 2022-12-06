@@ -10,7 +10,7 @@
 4. 参考 [graiax 文档](https://graiax.cn/before/install_mirai.html) 配置 `setting.yml`
 5. 下载 [silicon](https://github.com/Aloxaf/silicon) 二进制文件，放在脚本运行目录下
 6. 执行 `pip install openai graia-ariadne transformers`
-7. 启动脚本开始使用
+7. 启动 `chatbot.py` 脚本开始使用
 
 ## 使用
 
