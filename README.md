@@ -4,7 +4,7 @@
 
 测试 Bot：2792516024
 
-![QQ截图20221206232053](https://user-images.githubusercontent.com/21212051/205951911-d4c8a6e4-3b61-4bae-91b0-502c895a268b.png)
+![QQ截图20221207002216](https://user-images.githubusercontent.com/21212051/205966415-101330b3-9ac2-497a-aa5f-612837016ded.png)
 
 ## 安装
 
