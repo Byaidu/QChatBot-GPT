@@ -69,13 +69,13 @@ A:我要用电子烟把乐子烟出来，让这里的乐子都活跃起来。
     "enable_context": true, // 启用上下文
     "context": "", // 上下文内容
     "openai": { // OpenAI 参数
-        "model": "text-davinci-003", //语言模型
-        "temperature": 0.9, //采样温度，趋近0会给出理智的回答，趋近1会给出创意的回答
-        "max_tokens": 3000, //生成长度
-        "top_p": 1, //核采样参数
-        "echo": false, //回显上下文
-        "presence_penalty": 0, //presence惩罚
-        "frequency_penalty": 0 //frequency惩罚
+        "model": "text-davinci-003", // 语言模型
+        "temperature": 0.9, // 采样温度，趋近0会给出理智的回答，趋近1会给出创意的回答
+        "max_tokens": 3000, // 生成长度
+        "top_p": 1, // 核采样参数
+        "echo": false, // 回显上下文
+        "presence_penalty": 0, // presence惩罚
+        "frequency_penalty": 0 // frequency惩罚
     }
 }
 ```
