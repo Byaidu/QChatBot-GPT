@@ -2,6 +2,8 @@
 
 基于 OpenAI ChatGPT 和 Mirai 的 QQ 聊天机器人
 
+测试 Bot：2792516024
+
 ![QQ截图20221206232053](https://user-images.githubusercontent.com/21212051/205951911-d4c8a6e4-3b61-4bae-91b0-502c895a268b.png)
 
 ## 安装
