@@ -1,6 +1,6 @@
 # QChatBot-GPT
 
-基于 OpenAI ChatGPT 和 Mirai 的 QQ 聊天机器人
+基于 OpenAI GPT-3 和 Mirai 的 QQ 聊天机器人
 
 测试 Bot：2792516024
 
