@@ -201,7 +201,7 @@ QChatBot-GPT 指令列表
 /mem    ：设置记忆长度，范围为 4~4096
 /help   ：查看帮助
 
-注：预设+记忆+回答 共同占用长度为 4096 tokens 的区域
+注：记忆(包括预设和对话)+回答 共同占用长度为 4096 tokens 的区域
 '''))
     await send_message_proxy(app,group,MessageChain('配置参考：https://beta.openai.com/docs/api-reference/completions/create'))
     await send_message_proxy(app,group,MessageChain('项目地址：https://github.com/Byaidu/QChatBot-GPT'))
