@@ -10,10 +10,10 @@ from functools import wraps, partial
 from creart import create
 from graia.ariadne.app import Ariadne
 from graia.ariadne.connection.config import config
-from graia.ariadne.event.message import GroupMessage
+from graia.ariadne.event.message import GroupMessage, FriendMessage
 from graia.ariadne.event.mirai import NewFriendRequestEvent, BotInvitedJoinGroupRequestEvent
 from graia.ariadne.message.chain import MessageChain
-from graia.ariadne.model import Group
+from graia.ariadne.model import Group, Friend
 from graia.broadcast import Broadcast
 from graia.ariadne.message.parser.base import *
 from graia.ariadne.message.element import Image
@@ -87,7 +87,7 @@ def read_chat_config():
         resp = {}
     return resp
 
-async def send_message_proxy(app: Ariadne, group: Group, resp: MessageChain, quote: Union[bool, MessageChain]=False):
+async def send_message_proxy(app: Ariadne, group: Union[Group, Friend], resp: MessageChain, quote: Union[bool, MessageChain]=False):
     msg = await app.send_message(group,resp,quote=quote)
     if msg.source.id < 0:
         txt = '\n'.join([textwrap.fill(i) for i in resp.display.splitlines()])
@@ -215,6 +215,10 @@ async def help(app: Ariadne, event: BotInvitedJoinGroupRequestEvent):
 async def help(app: Ariadne, event: NewFriendRequestEvent):
     logging.info('NewFriendRequestEvent')
     await event.accept()
+
+@bcc.receiver(FriendMessage)
+async def hello(app: Ariadne, friend: Friend, message: MessageChain):
+    await send_message_proxy(app,friend,MessageChain('要添加 bot 到群聊中才能使用哦'))
 
 chat_config = read_chat_config()
 
