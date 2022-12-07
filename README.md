@@ -15,8 +15,9 @@
 3. 参考 [graiax 文档](https://graiax.cn/before/install_mirai.html) 安装 [mirai-api-http](https://github.com/project-mirai/mirai-api-http) 并配置 `setting.yml`
 4. 启动 [mirai-console-loader](https://github.com/iTXTech/mirai-console-loader) 登陆账户
 5. 下载 [silicon](https://github.com/Aloxaf/silicon) 二进制文件，放在脚本运行目录下
-6. 执行 `pip install openai graia-ariadne transformers` 安装依赖
-7. 启动 `chatbot.py` 脚本开始使用
+6. 安装 [rust](https://www.rust-lang.org/)
+7. 执行 `pip install openai graia-ariadne transformers` 安装依赖
+8. 启动 `chatbot.py` 脚本开始使用
 
 ## 使用
 
