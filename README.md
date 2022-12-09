@@ -16,7 +16,7 @@
 4. 启动 [mirai-console-loader](https://github.com/iTXTech/mirai-console-loader) 登陆账户
 5. 下载 [silicon](https://github.com/Aloxaf/silicon) 二进制文件，放在脚本工作目录下
 6. 安装 [rust](https://www.rust-lang.org/) 环境
-7. 执行 `pip install openai graia-ariadne transformers` 安装依赖
+7. 执行 `pip install openai graia-ariadne transformers` 安装依赖，其中 `transformers` 可能无法在 `Python 3.11` 环境下正常工作
 8. 启动 `chatbot.py` 脚本开始使用
 
 ## 使用
@@ -81,12 +81,12 @@ A:我要用电子烟把乐子烟出来，让这里的乐子都活跃起来。
     "context": "", // 上下文内容
     "openai": { // OpenAI 参数
         "model": "text-davinci-003", // 语言模型
-        "temperature": 0.9, // 采样温度，趋近0会给出理智的回答，趋近1会给出创意的回答
+        "temperature": 0.9, // 采样温度，趋近 0 会给出理智的回答，趋近 1 会给出创意的回答
         "max_tokens": 3000, // 生成长度
         "top_p": 1, // 核采样参数
         "echo": false, // 回显上下文
-        "presence_penalty": 0, // presence惩罚
-        "frequency_penalty": 0 // frequency惩罚
+        "presence_penalty": 0, // presence 惩罚
+        "frequency_penalty": 0 // frequency 惩罚
     }
 }
 ```
@@ -102,12 +102,12 @@ A:我要用电子烟把乐子烟出来，让这里的乐子都活跃起来。
     "context": "", // 上下文内容
     "openai": { // OpenAI 参数
         "model": "text-curie-001", // 语言模型
-        "temperature": 0.9, // 采样温度，趋近0会给出理智的回答，趋近1会给出创意的回答
+        "temperature": 0.9, // 采样温度，趋近 0 会给出理智的回答，趋近 1 会给出创意的回答
         "max_tokens": 1000, // 生成长度
         "top_p": 1, // 核采样参数
         "echo": false, // 回显上下文
-        "presence_penalty": 0, // presence惩罚
-        "frequency_penalty": 0 // frequency惩罚
+        "presence_penalty": 0, // presence 惩罚
+        "frequency_penalty": 0 // frequency 惩罚
     }
 }
 ```
