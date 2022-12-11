@@ -19,6 +19,20 @@
 7. 执行 `pip install openai graia-ariadne transformers` 安装依赖，其中 `transformers` 可能无法在 `Python 3.11` 环境下正常工作
 8. 启动 `chatbot.py` 脚本开始使用
 
+## 环境变量
+
+### Windows
+
+临时设置：`set BOT_ACCOUNT=2792516024`
+
+永久设置：`setx BOT_ACCOUNT 2792516024`
+
+### Linux
+
+临时设置：`export BOT_ACCOUNT=2792516024`
+
+永久设置：编辑 `/etc/profile` 文件
+
 ## 使用
 
 ```
