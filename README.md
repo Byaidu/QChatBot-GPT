@@ -16,7 +16,7 @@
 4. 启动 [mirai-console-loader](https://github.com/iTXTech/mirai-console-loader) 登陆账户
 5. 下载 [silicon](https://github.com/Aloxaf/silicon) 二进制文件，放在脚本工作目录下
 6. 安装 [rust](https://www.rust-lang.org/) 环境
-7. 执行 `pip install openai graia-ariadne transformers` 安装依赖，其中 `transformers` 可能无法在 `Python 3.11` 环境下正常工作
+7. 执行 `pip install openai graia-ariadne transformers` 安装依赖
 8. 启动 `chatbot.py` 脚本开始使用
 
 ## 环境变量
