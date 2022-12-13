@@ -2,6 +2,8 @@
 
 基于 OpenAI GPT-3 和 Mirai 的 QQ 聊天机器人，提供原生的 GPT-3 体验，摆脱 ChatGPT 的默认人格限制
 
+重构版本：[OPQChatBot-GPT](https://github.com/timlzh/OPQChatBot-GPT)
+
 测试 Bot：~2792516024~
 
 若 Bot 在某个群聊中处于不可用状态，请使用 /key 指令设置此群聊环境下使用的 OpenAI API Key
